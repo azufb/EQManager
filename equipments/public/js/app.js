@@ -1924,9 +1924,63 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
+  name: 'app',
+  computed: {
+    items: function items() {
+      return this.$store.getters.items;
+    },
+    count: function count() {
+      return this.$store.getters.items.count;
+    }
+  },
+  data: function data() {
+    return {
+      name: '',
+      d: ''
+    };
+  },
+  methods: {
+    onclick: function onclick() {
+      this.$store.commit('addItem', {
+        item: {
+          name: this.name,
+          count: 0,
+          d: new Date()
+        }
+      });
+      this.name = '';
+    },
+    deleteItem: function deleteItem(d) {
+      this.$store.commit('deleteItem', d);
+    },
+    plus: function plus(d) {
+      this.$store.commit('plus', d);
+    },
+    minus: function minus(d) {
+      this.$store.commit('minus', d);
+    }
   }
 });
 
@@ -37514,32 +37568,128 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "app" },
+    [
+      _c(
+        "v-col",
+        { key: 12, attrs: { cols: "12", sm: "10", md: "8", lg: "4", xl: "3" } },
+        [
+          _c("v-app-bar", { attrs: { app: "", color: "#B2EBF2" } }, [
+            _c("div", [_c("h1", [_vm._v("Equipment Manager")])])
+          ]),
+          _vm._v(" "),
+          _c(
+            "v-main",
+            [
+              _c(
+                "v-form",
+                {
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.onclick($event)
+                    }
+                  }
+                },
+                [
+                  _c("label", { attrs: { for: "name" } }, [_vm._v("品目名：")]),
+                  _vm._v(" "),
+                  _c("v-text-field", {
+                    staticClass: "mb-0",
+                    attrs: {
+                      label: "品目名を入力してください。",
+                      "single-line": "",
+                      solo: "",
+                      id: "name",
+                      required: ""
+                    },
+                    model: {
+                      value: _vm.name,
+                      callback: function($$v) {
+                        _vm.name = $$v
+                      },
+                      expression: "name"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    { staticClass: "mt-0 mb-5", attrs: { type: "submit" } },
+                    [_vm._v("登録")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.items, function(item, index) {
+                return _c("ul", { key: index }, [
+                  _c("li", [
+                    _vm._v("\n      " + _vm._s(item.name) + "\n      "),
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "v-btn",
+                          {
+                            staticClass: "btn",
+                            attrs: { color: "#80DEEA" },
+                            on: {
+                              click: function($event) {
+                                return _vm.deleteItem(item.d)
+                              }
+                            }
+                          },
+                          [_vm._v("DELETE")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-btn",
+                          {
+                            staticClass: "btn",
+                            attrs: { color: "#80DEEA" },
+                            on: {
+                              click: function($event) {
+                                return _vm.plus(item.d)
+                              }
+                            }
+                          },
+                          [_vm._v("PLUS")]
+                        ),
+                        _vm._v(
+                          "\n        " + _vm._s(item.count) + "\n        "
+                        ),
+                        _c(
+                          "v-btn",
+                          {
+                            staticClass: "btn",
+                            attrs: { color: "#80DEEA" },
+                            on: {
+                              click: function($event) {
+                                return _vm.minus(item.d)
+                              }
+                            }
+                          },
+                          [_vm._v("MINUS")]
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ])
+              })
+            ],
+            2
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
