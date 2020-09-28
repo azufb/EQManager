@@ -22,4 +22,5 @@
 </div>
 
 <example-component></example-component>
+<script src="{{ mix('js/app.js') }}"></script>
 @endsection
