@@ -96,7 +96,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module './store/index.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _store_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./store/index.js */ "./resources/js/components/store/index.js");
 //
 //
 //
@@ -36876,7 +36876,7 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./store/index */ "./resources/js/store/index.js");
+/* harmony import */ var _components_store_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/store/index */ "./resources/js/components/store/index.js");
 /* harmony import */ var _app_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.vue */ "./resources/js/app.vue");
 /* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuetify */ "./node_modules/vuetify/dist/vuetify.js");
 /* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vuetify__WEBPACK_IMPORTED_MODULE_3__);
@@ -36910,7 +36910,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('example-component', __webp
 
 
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  store: _store_index__WEBPACK_IMPORTED_MODULE_1__["default"],
+  store: _components_store_index__WEBPACK_IMPORTED_MODULE_1__["default"],
   Vuetify: vuetify__WEBPACK_IMPORTED_MODULE_3___default.a,
   render: function render(h) {
     return h(_app_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);
@@ -37123,10 +37123,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/store/index.js":
-/*!*************************************!*\
-  !*** ./resources/js/store/index.js ***!
-  \*************************************/
+/***/ "./resources/js/components/store/index.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/store/index.js ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
