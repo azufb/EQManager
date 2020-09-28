@@ -28,10 +28,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 import Vue from 'vue'
 import store from './store/index'
+import App from './app.vue'
 import Vuetify from 'vuetify'
 
-const app = new Vue({
-    el: '#app',
+new Vue({
     store,
     Vuetify,
     render: h =>h(App),
