@@ -2,10 +2,6 @@
     <div class='app' data-app app-data="true" light>
     <v-col :key='12'
       cols=12 sm=10 md=8 lg=4 xl=3>
-      <div>
-        <h1>Equipment Manager</h1>
-      </div>
-
     <v-main>
       <v-form v-on:submit.prevent='onclick'>
         <label for='name'>品目名：</label>

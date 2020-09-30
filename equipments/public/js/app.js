@@ -37,15 +37,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'app',
   computed: {
@@ -97,10 +88,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./store/index.js */ "./resources/js/components/store/index.js");
-//
-//
-//
-//
 //
 //
 //
@@ -36406,10 +36393,6 @@ var render = function() {
         "v-col",
         { key: 12, attrs: { cols: "12", sm: "10", md: "8", lg: "4", xl: "3" } },
         [
-          _c("v-app-bar", { attrs: { app: "", color: "#B2EBF2" } }, [
-            _c("div", [_c("h1", [_vm._v("Equipment Manager")])])
-          ]),
-          _vm._v(" "),
           _c(
             "v-main",
             [
@@ -36552,8 +36535,6 @@ var render = function() {
         "v-col",
         { key: 12, attrs: { cols: "12", sm: "10", md: "8", lg: "4", xl: "3" } },
         [
-          _c("div", [_c("h1", [_vm._v("Equipment Manager")])]),
-          _vm._v(" "),
           _c(
             "v-main",
             [
@@ -37018,6 +36999,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -37025,7 +37007,6 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
  */
 
 try {
-  window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
   window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
