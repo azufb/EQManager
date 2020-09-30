@@ -27,13 +27,17 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 import Vue from 'vue'
-import store from './store/index'
+import store from './components/store/index'
 import App from './app.vue'
-import Vuetify from 'vuetify'
+import Vuetify from 'vuetify';
+
+Vue.use(Vuetify);
+import "vuetify/dist/vuetify.min.css";
 
 new Vue({
     store,
-    Vuetify,
+    vuetify: new Vuetify(),
     render: h =>h(App),
     components: { App },
+    template: "<App />"
 }).$mount('#app');
