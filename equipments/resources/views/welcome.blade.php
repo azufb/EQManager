@@ -77,6 +77,20 @@
             footer {
                 margin-top: auto;
             }
+            
+            @media(max-width: 767px) {
+                .title {
+                    font-size: 35px;
+                }
+                .m-b-md {
+                    margin-bottom: 10px;
+                }
+
+                .p {
+                    font-size: 10px;
+                }
+            }
+
         </style>
     </head>
     <body>
@@ -99,10 +113,10 @@
                 <div class="title m-b-md">
                     Personal Equipment Manager
                 </div>
-                <p>
-                    <hr>
-                    身の回りに、溜まっていくものや、集めているものはありませんか?<br>
-                    このPersonal Equipment Managerで、種類や個数を手軽に管理してみませんか?<br>
+                <hr>
+                <p class="p">
+                    身の回りに、溜まっていくものや集めているものはありませんか?<br>
+                    Personal Equipment Managerで、種類や個数を管理してみませんか?<br>
                 </p>
             </div>
         </div>
