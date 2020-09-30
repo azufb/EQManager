@@ -129,11 +129,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'app',
@@ -36548,15 +36543,16 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "app" },
+    {
+      staticClass: "app",
+      attrs: { "data-app": "", "app-data": "true", light: "" }
+    },
     [
       _c(
         "v-col",
         { key: 12, attrs: { cols: "12", sm: "10", md: "8", lg: "4", xl: "3" } },
         [
-          _c("v-app-bar", { attrs: { app: "", color: "#B2EBF2" } }, [
-            _c("div", [_c("h1", [_vm._v("Equipment Manager")])])
-          ]),
+          _c("div", [_c("h1", [_vm._v("Equipment Manager")])]),
           _vm._v(" "),
           _c(
             "v-main",
@@ -36880,6 +36876,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.vue */ "./resources/js/app.vue");
 /* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuetify */ "./node_modules/vuetify/dist/vuetify.js");
 /* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vuetify__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/dist/vuetify.min.css */ "./node_modules/vuetify/dist/vuetify.min.css");
+/* harmony import */ var vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_4__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -36909,15 +36907,18 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('example-component', __webp
 
 
 
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_3___default.a);
+
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   store: _components_store_index__WEBPACK_IMPORTED_MODULE_1__["default"],
-  Vuetify: vuetify__WEBPACK_IMPORTED_MODULE_3___default.a,
+  vuetify: new vuetify__WEBPACK_IMPORTED_MODULE_3___default.a(),
   render: function render(h) {
     return h(_app_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);
   },
   components: {
     App: _app_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }
+  },
+  template: "<App />"
 }).$mount('#app');
 
 /***/ }),
